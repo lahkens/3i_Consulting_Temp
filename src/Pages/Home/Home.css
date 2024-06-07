@@ -4,16 +4,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 
 
-.infoSection{
+.infoSection {
+    padding-left: 5% !important;
+    position: relative; /* Ensure the container is positioned relatively for absolute positioning inside */ 
+    height: 400px; /* Set a fixed height for the container */
     /* border: solid red 5px; */
-    background-image: url('../../Assets/Images/info-bg-992.png');
     background-repeat: no-repeat;
     background-size: cover;
+    width: 80% !important;
     text-align: center;
+    max-width: 100%;
     margin-top: 100px;
     margin-bottom: 100px;
 }
 
+.starimg1 {
+    position: absolute; /* Use absolute positioning */
+    /* border: solid red 5px; */
+    width: 10%; /* Set width as a percentage of the container */
+    height: 10%; /* Set height as a percentage of the container */
+    /* margin: 2px; */
+    background-image: url('../../Assets/Images/GroupStars.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    right: 0; /* Align to the right edge of the container */
+    padding: 0;
+    margin: 0; /* Remove any default margin */
+    box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+}
+
+.infoTitleContainer {
+    padding-top: 5% !important;
+    width: 90%; /* Take up 90% of the container width */
+    padding: 0; /* Remove padding */
+    /* border: solid red 5px; */
+    margin: 0; /* Remove any default margin */
+    box-sizing: border-box; /* Ensure border is included in the width and height */
+    text-align: center !important; /* Align text to the left */
+}
+.starimg2 {
+    position: absolute; /* Use absolute positioning */
+    /* border: solid red 5px; */
+    width: 10%; /* Set width as a percentage of the container */
+    height: 10%; /* Set height as a percentage of the container */
+    /* margin: 2px; */
+    background-image: url('../../Assets/Images/Star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    top: 70%;
+    left: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+}
+
+
+/* .starimg3 {
+    width: 25%;
+    height: 25%;
+    bottom: 5%;
+    left: 40%;
+    background-image: url('../../Assets/Images/Star.svg');
+} */
+ .infoParaContainer{
+    padding-right: 5% !important;
+ }
 .infoTitleContainer h1{
     font-weight: 700;
     color: black;
@@ -34,10 +90,60 @@
 
 }
 
+@media only screen and (min-width: 346px)and (max-width: 399px){
+    .starimg2{
+        left: 0 !important;
+        top: 80% !important;
+    }
+}
+@media only screen and (max-width: 399px){
+    .starimg2{
+        top: 90%;
+    }
+}
+@media only screen and (max-width: 430px){
+     .starimg2{
+        /* top: 90%; */
+        width: 15%;
+     }
+}
 
+@media only screen and (max-width: 430px){
+    .infoTitleContainer h1{
+        width: 95%;
+        font-size: 1.3rem !important;
+    }
+    .starimg1{
+        right: 4% ;
+    }
+}
+
+@media only screen and (max-width: 460px){
+    .infoTitleContainer h1{
+        width: 95%;
+        font-size: 1.2rem;
+    }
+    .starimg1{
+        width: 20% !important ;
+    }
+}
+@media only screen and (min-width: 400px) and (max-width: 600px){
+   .starimg1{
+      width: 15% !important;
+      right: 0 !important;
+   }
+}
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+   .starimg2{
+    top: 50%;
+    width: 8%;
+   }
+}
 /* Mobile Phones (Portrait) */
-@media only screen and (max-width: 480px) {
-   
+@media only screen and (max-width: 701px) {
+   .starimg1{
+    right: 5%;
+   }
     .infoSectionContainer{
         padding: 0;
         align-items: flex-start !important;
@@ -49,8 +155,13 @@
         background-size:contain;
 
     }
+    
     .infoTitleContainer h1{
+        width: 95%;
         font-size: 1.5rem;
+    }
+    .starimg1{
+        width: 20%;
     }
     .infoParaContainer{
         margin: 0 .5rem !important;
@@ -70,93 +181,47 @@
 
   }
   
-  /* Mobile Phones (Landscape) */
-  @media only screen and (min-width: 481px) and (max-width: 767px) {
-    .infoSectionContainer{
-        padding: 0;
-        align-items: flex-start !important;
+
+  @media only screen and (max-width: 699px) {
+    .starimg1{
+        width: 10%;
     }
-    .infoSection{
-        /* width: 100% !important; */
-        padding: 0 .5rem;
-        background-image: url('../../Assets/Images/Group\ 11651.png');
-        background-size:contain;
+}
+
+  @media only screen and (min-width: 700px) and (max-width: 1000px) {
+    .infoTitleContainer  h1{
+        font-size: 2rem !important; /* Use !important to override any other styles */
     }
-    .infoTitleContainer h1{
-        font-size: 1.5rem;
+    /* .img1{
+        right: 30% !important;
+    } */
+    .starimg2{
+        left: 5% !important;
     }
-    .infoParaContainer{
-        margin: 0 .5rem !important;
-    }
-    .infoParaContainer p{
-        font-size: .8rem;
-    }
-    .infoBtnContainer button{
-        padding: 5px 10px;
-        /* font-weight: 500; */
-        margin-right: 10px  !important;
-    }
-    .infoBtnContainer button:nth-child(2){
-        padding: 5px 10px;
-        margin: 0 !important;
-    }
-  }
-  
-  /* Tablets (Portrait) */
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .infoSectionContainer{
-        padding: 0;
-        align-items: flex-start !important;
-    }
-    .infoSection{
-        /* width: 100% !important; */
-        padding: 0 .5rem;
-        background-image: url('../../Assets/Images/info-bg-768.png');
-        background-size:contain;
-    }
-    .infoTitleContainer h1{
-        font-size: 1.7rem;
-    }
-    .infoParaContainer{
-        margin: 0 4rem !important;
-    }
-    .infoParaContainer p{
-        font-size: 1rem;
-    }
-   
-  }
-  
-  /* Tablets (Landscape) */
-  @media only screen and (min-width: 992px) and (max-width: 1023px) {
-    .infoSectionContainer{
-        padding: 0;
-        align-items: flex-start !important;
-    }
-    .infoSection{
-        /* width: 100% !important; */
-        padding: 0 .5rem;
-        background-image: url('../../Assets/Images/info-bg-992.png');
-        background-size:contain;
-    }
-   
-    .infoParaContainer{
-        margin: 0 5rem !important;
-    }
-   
-    
-  }
-  
+}
   /* Small Laptops and Desktops */
   @media only screen and (min-width: 1024px) and (max-width: 1199px) {
     .infoSectionContainer{
         padding: 0;
         align-items: flex-start !important;
     }
+    .starimg1{
+        width: 15%; /* Increase the width */
+        height: 15%; /* Increase the height */
+        right: 5%;
+    }
+    .starimg2{
+        width: 15%; /* Increase the width */
+        height: 15%; /* Increase the height */
+        left: 5% !important;
+    }
+    
+
     .infoSection{
         /* width: 100% !important; */
         /* border: solid red 5px; */
         padding: 0 .5rem;
-        background-image: url('../../Assets/Images/info-bg-992.png');
+        /* background-image: url('../../Assets/Images/info-bg-992.png'); */
         background-size:cover;
         align-items: center;
     }
@@ -165,89 +230,39 @@
     }
   }
   
-  /* Medium to Large Desktops */
-  @media only screen and (min-width: 1200px) and (max-width: 1439px) {
-    .infoSection{
-        padding-top: 3rem;
-        background-image: url('../../Assets/Images/info-bg-1440\ above.png');
-        background-size:contain;
+  @media only screen and (min-width: 1200px) and (max-width: 2000px) {
+    .starimg1 {
+        width: 15%; /* Increase the width */
+        height: 15%; /* Increase the height */
     }
-    .infoTitleContainer h1{
-        font-size: 2.5rem;
-    }
-    .infoParaContainer p{
-        font-size: 1.7rem;
-    }
-    .infoBtnContainer button{
-        padding: 1rem 2rem;
-        font-size: 1.3rem;
-        margin-right: 10px  !important;
-    }
-    .infoBtnContainer button:nth-child(2){
-        padding: 1rem 2rem;
-        margin: 0 !important;
+    .starimg2 {
+        width: 15%; /* Increase the width */
+        height: 15%; /* Increase the height */
     }
   }
-  
+
   /* Large Desktops and TVs */
-  @media only screen and (min-width: 1440px) and (max-width: 2000px) {
-  
-    .infoSection{
-        /* border: solid red 5px; */
-        width: 100%;
-        height: 100%;
-        /* height: 10%; */
-        padding-top: 7rem;
-        background-image: url('../../Assets/Images/info-bg-1440\ above.png');
-        background-size:contain;
+  @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .starimg1 {
+        right: 6%;
     }
-    .infoTitleContainer h1{
-        font-size: 3rem;
+    .starimg2 {
+        left: 10%;
     }
-    .infoParaContainer{
-        margin: 0 6rem !important;
-    }
-    .infoParaContainer p{
-        font-size: 2rem;
-    }
-    .infoBtnContainer button{
-        padding: 1.5rem 3rem;
-        font-size: 1.3rem;
-        margin-right: 10px  !important;
-    }
-    .infoBtnContainer button:nth-child(2){
-        padding: 1.5rem 3rem;
-        margin: 0 !important;
-    }
-  }
-  @media only screen and (min-width: 2001px)  {
-  
-    .infoSection{
+}
 
-        padding-top: 7rem;
-        background-image: url('../../Assets/Images/info-bg-1440\ above.png');
-        background-size: 100% 100%;
+  
+  @media only screen and (min-width: 1441px) and (max-width: 2000px) {
+  
+    .starimg1{
+        right: 10%;
     }
-    .infoTitleContainer h1{
-        font-size: 3.5rem;
+    .starimg2{
+        left: 10%;
     }
-    .infoParaContainer{
-        margin: 0 6rem !important;
-    }
-    .infoParaContainer p{
-        font-size: 2.5rem;
-    }
-    .infoBtnContainer button{
-        padding: 1.5rem 3rem;
-        font-size: 1.8rem;
-        margin-right: 10px  !important;
-    }
-    .infoBtnContainer button:nth-child(2){
-        padding: 1.5rem 3rem;
-        margin: 0 !important;
-    }
+    
   }
-
+  
 /* home about us section starts here*/
 
 .Home_AboutUsContainer{

@@ -1,5 +1,6 @@
 import React from "react";
 import InfoSection from "./InfoSection";
+import NewInfoSection from "./NewInfoSection";
 import Home_AboutUs from "./Home_AboutUs";
 import Home_Services from "./Home_Services";
 import OurProducts from "./OurProducts";
@@ -24,7 +25,8 @@ function Home(){
 
     return(<>
     <HeroSection img={Img}/>
-    <InfoSection/>
+    {/* <InfoSection/> */}
+    <NewInfoSection/>
     <Home_AboutUs/>
     <Home_Services/>
     <OurProducts/>
