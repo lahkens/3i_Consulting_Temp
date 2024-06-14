@@ -1,19 +1,18 @@
+// ClientImages component
 import React from "react";
 import clientBg from '../../Assets/Images/client-bgImg.png';
+import './Home.css'; // Import the CSS file where you defined the styles
 
-
-
-
-
-
-
-function ClientImages(){
-
-    return(<>
+function ClientImages() {
+  return (
     <div className="container-fluid my-5 px-5 clientImagesContainer">
-        <img src={clientBg}/>
+      <div className="marquee">
+        <img src={clientBg} alt="Client Background" className="marqueeImage" />
+        {/* Add more images as needed */}
+        {/* <img src={anotherImage} alt="Another Image" className="marqueeImage" /> */}
+      </div>
     </div>
-    </>)
+  );
 }
 
 export default React.memo(ClientImages);

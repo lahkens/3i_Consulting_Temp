@@ -7,6 +7,7 @@ import OurProducts from "./OurProducts";
 import ProductSlider from "./ProductSlider";
 import ClientImages from "./ClientImages";
 import TestimonialsSection from "./TestimonialsSection";
+import TestimonialsSection1 from "./TestimonialsSection1";
 import ChooseUs from "./ChooseUs";
 import OurProjects from "./OurProjects";
 import Gallery from "./Gallery";
@@ -24,20 +25,21 @@ function Home(){
 
 
     return(<>
-    <HeroSection img={Img}/>
-    {/* <InfoSection/> */}
+    {/* <HeroSection img={Img}/>
+    <InfoSection/>
     <NewInfoSection/>
     <Home_AboutUs/>
     <Home_Services/>
     <OurProducts/>
     <ProductSlider/>
-    <ClientImages/>
-    <TestimonialsSection/>
-    <ChooseUs/>
+    <ClientImages/>  */}
+    {/* <TestimonialsSection/> */}
+    <TestimonialsSection1/>
+    {/* <ChooseUs/>
     <OurProjects/> 
-    {/* <Gallery/>  */}
+    <Gallery/> 
     <FAQs/>
-    <HomeContactUs/>
+    <HomeContactUs/> */}
     </>)
 }
 
